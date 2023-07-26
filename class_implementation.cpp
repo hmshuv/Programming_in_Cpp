@@ -4,33 +4,35 @@ using namespace std;
 
     // Write C++ code here
     class item{
+        public:
         int number;
         float cost; 
         public:
-        void getdata(int a, float b);
+    //     void getdata(int a, float b){
+    //     number = a;
+    //     cost = b;
+    // }
         void putdata(void){
             cout << "number: " << number << "\n";
             cout << "cost: " << cost << "\n";
         }
     };
-    void item :: getdata(int a, float b)
-    {
-        number = a;
-        cost = b;
-    }
+    // void item :: getdata(int a, float b)
+    
     int main(){
         item x;
         
         cout << "\nobject x" << "\n";
-        
-        x.getdata(100, 299.95);
+        x.number = 100, x.cost = 299.95;
+        //x.getdata(100, 299.95);
         x.putdata();
         
         item y;
         
         cout << "\nobject y" << "\n";
         
-        y.getdata(200, 175.50);
+        //y.getdata(200, 175.50);
+        y.number = 200, y.cost = 175.50;
         y.putdata();
         return 0;
     }
